@@ -1,10 +1,6 @@
 import React from 'react';
-import styled from 'styled-components/native';
 
-const StyledText = styled.Text`
-  color: #8cd6bd;
-  font-size: 64px;
-`;
+import {StyledText} from './text.styled.ts';
 
 interface IProps {
   children: React.ReactNode;

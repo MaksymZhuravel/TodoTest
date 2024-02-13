@@ -1,5 +1,6 @@
 import React, {memo} from 'react';
-import styled from 'styled-components/native';
+
+import {StyledButtonPressable, StyledButtonText} from './button.styled.ts';
 
 interface IProps {
   onPress: () => void;
@@ -7,25 +8,12 @@ interface IProps {
 }
 
 const Button: React.FC<IProps> = ({onPress, title}) => {
+  console.log('HAHHAHA');
   return (
-    <StyledPressable onPress={onPress}>
-      <StyledText>{title}</StyledText>
-    </StyledPressable>
+    <StyledButtonPressable onPress={onPress}>
+      <StyledButtonText>{title}</StyledButtonText>
+    </StyledButtonPressable>
   );
 };
-
-
-const StyledPressable = styled.Pressable`
-  border-radius: 15px;
-  background-color: white;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-`;
-
-const StyledText = styled.Text`
-  font-size: 24px;
-  font-weight: bold;
-`;
 
 export default memo(Button);

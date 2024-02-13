@@ -1,18 +1,17 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import {ThemeProvider} from 'styled-components';
 
 import {store} from './redux/store';
 import Main from './screens/Main';
-import theme from './themes/theme';
+import ThemeProvider from './themes/ThemeProvider.tsx';
 
 function App(): React.JSX.Element {
   return (
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider>
+      <Provider store={store}>
         <Main />
-      </ThemeProvider>
-    </Provider>
+      </Provider>
+    </ThemeProvider>
   );
 }
 

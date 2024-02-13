@@ -5,14 +5,13 @@ import {StyledButtonPressable, StyledButtonText} from './button.styled.ts';
 interface IProps {
   onPress: () => void;
   title: string;
+  width?: number | string;
 }
 
-const Button: React.FC<IProps> = ({onPress, title}) => {
+export const Button: React.FC<IProps> = memo(({onPress, title, width}) => {
   return (
-    <StyledButtonPressable onPress={onPress}>
+    <StyledButtonPressable width={width} onPress={onPress}>
       <StyledButtonText>{title}</StyledButtonText>
     </StyledButtonPressable>
   );
-};
-
-export default memo(Button);
+});

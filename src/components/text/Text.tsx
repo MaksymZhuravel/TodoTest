@@ -6,8 +6,6 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Text: React.FC<IProps> = ({children}) => {
+export const Text: React.FC<IProps> = ({children}) => {
   return <StyledText>{children}</StyledText>;
 };
-
-export default Text;

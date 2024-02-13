@@ -8,7 +8,6 @@ interface IProps {
 }
 
 const Button: React.FC<IProps> = ({onPress, title}) => {
-  console.log('HAHHAHA');
   return (
     <StyledButtonPressable onPress={onPress}>
       <StyledButtonText>{title}</StyledButtonText>

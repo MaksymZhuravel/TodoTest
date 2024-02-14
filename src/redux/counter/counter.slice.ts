@@ -4,7 +4,7 @@ interface IState {
   counter: number;
 }
 
-const initialState: IState = {
+export const initialState: IState = {
   counter: 0,
 };
 

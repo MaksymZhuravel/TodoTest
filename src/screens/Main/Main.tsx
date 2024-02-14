@@ -1,10 +1,10 @@
 import React, {useCallback} from 'react';
 import styled from 'styled-components/native';
 
-import {useAppDispatch, useAppSelector} from '../redux/hooks';
-import {getCounter} from '../redux/counter/counter.selector';
-import {decrement, increment} from '../redux/counter/counter.slice';
-import {Button, Text} from '../components';
+import {useAppDispatch, useAppSelector} from '../../redux/hooks.ts';
+import {getCounter} from '../../redux/counter/counter.selector.ts';
+import {decrement, increment} from '../../redux/counter/counter.slice.ts';
+import {Button, Text} from '../../components';
 
 const Main = () => {
   const counter = useAppSelector(getCounter);
@@ -29,7 +29,8 @@ const Main = () => {
 
 const MainContainer = styled.SafeAreaView`
   flex: 1;
-  background: ${props => props.theme.colors.background};
+  background: ${props =>
+    props.theme.colors ? props.theme.colors.background : '#FFF'};
   align-items: center;
   justify-content: center;
   gap: 50px;
